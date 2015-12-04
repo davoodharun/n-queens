@@ -98,7 +98,7 @@
         }
       }
 
-      return false; 
+      return false;
     },
 
 
@@ -147,32 +147,32 @@
         if(rows[i][j] !== 0){
           count++;
         }
-        
+
       }
-      return count > 1;  
+      return count > 1;
     },
 
     // test if any major diagonals on this board contain conflicts
 
     //Can optimize further, will revisit if have time.
     hasAnyMajorDiagonalConflicts: function() {
-      
+
         var cols = this.rows();
         //debugger;
       for(var j = 0; j<cols.length;j++){
 
         for (var i = 0; i < cols.length; i++) {
           if (this.hasMajorDiagonalConflictAt(i,j)) {
-            console.log(true)
+
             return true;
           }
         }
-        
+
       }
-      console.log(false);
+
       return false;  // fixme
     },
-    
+
 
 
 
@@ -180,7 +180,7 @@
     // --------------------------------------------------------------
     //
     // test if a specific minor diagonal on this board contains a conflict
-    
+
     //Can optimize further, will revisit if have time.
     hasMinorDiagonalConflictAt: function(mDCIAFR, row) {
       var rows = this.rows();
@@ -193,9 +193,9 @@
         if(rows[i][j] !== 0){
           count++;
         }
-        
+
       }
-      return count > 1;  
+      return count > 1;
     },
 
     // test if any minor diagonals on this board contain conflicts
@@ -205,13 +205,13 @@
       for(var j = 0; j<cols.length;j++){
         for (var i = 0; i < cols.length; i++) {
           if (this.hasMinorDiagonalConflictAt(i,j)) {
-            console.log(true)
+
             return true;
           }
         }
-        
+
       }
-      console.log(false);
+
       return false;  // fixme
     },
 
